@@ -6,203 +6,211 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ffe4ef">
 <title>For My Kyuutu ♡</title>
-
 <style>
-:root {
-  --pink:#ed78a9;
-  --deep:#ad326b;
-  --text:#713b53;
-  --pale:#fff4f8;
+:root{
+  --pink:#ef83b0;--deep:#a72f68;--ink:#713950;
+  --pale:#fff3f8;--white:#fffafd;--line:#f5c5da;
 }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; scroll-padding-top:75px; }
-body {
-  margin:0;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:75px}
+body{
+  margin:0;color:var(--ink);
   font-family:Georgia,"Times New Roman",serif;
-  color:var(--text);
   background:
-    radial-gradient(ellipse at top left,#fff 0,transparent 45%),
-    radial-gradient(ellipse at right,#ffc8df 0,transparent 42%),
-    linear-gradient(145deg,#fff7fb,#ffe2ee,#fff5f9);
+    radial-gradient(ellipse at 5% 5%,#fff 0,transparent 40%),
+    radial-gradient(ellipse at 95% 25%,#ffd0e4 0,transparent 40%),
+    linear-gradient(145deg,#fff7fb,#ffe4ef,#fff8fb);
   overflow-x:hidden;
 }
-button,a { -webkit-tap-highlight-color:transparent; }
-button { font:inherit; }
-a { color:inherit;text-decoration:none; }
-nav {
-  position:sticky;top:0;z-index:10;
-  padding:13px 4%;
-  display:flex;align-items:center;justify-content:space-between;gap:8px;
-  background:#fff4f8ed;backdrop-filter:blur(14px);
-  border-bottom:1px solid #ffffff;
+button,input{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer}
+nav{
+  position:sticky;top:0;z-index:20;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:8px;padding:13px 4%;
+  background:#fff5faed;backdrop-filter:blur(14px);
+  border-bottom:1px solid #fff;
 }
-.brand { color:var(--deep);font-weight:bold;font-size:1.05rem; }
-.links { display:flex;gap:12px;font:11px Arial,sans-serif; }
-.links a:hover { color:#e35e99; }
-section { padding:65px 5%; }
-.hero {
-  min-height:88vh;display:flex;flex-direction:column;
-  justify-content:center;align-items:center;text-align:center;
-  padding-top:55px;position:relative;
+.brand{font-weight:bold;color:var(--deep);white-space:nowrap}
+.navlinks{display:flex;gap:12px;overflow-x:auto;font:11px Arial,sans-serif}
+.navlinks a{white-space:nowrap}
+.navlinks a:hover{color:#e15a98}
+section{padding:65px 5%;position:relative}
+.hero{
+  min-height:89vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding-top:50px;
 }
-.eyebrow {
-  font:11px Arial,sans-serif;text-transform:uppercase;
-  letter-spacing:3px;color:var(--deep);
+.eyebrow{
+  color:var(--deep);text-transform:uppercase;
+  letter-spacing:3px;font:10px Arial,sans-serif;
 }
-h1 {
-  font-size:clamp(3.5rem,14vw,7rem);line-height:.96;
-  color:var(--deep);font-weight:normal;margin:20px 0;
-}
-h1 em { color:#e56da1; }
-h2 {
-  font-size:clamp(2rem,8vw,3.3rem);color:var(--deep);
-  font-weight:normal;margin:12px 0 18px;
-}
-h3 { color:var(--deep); }
-p { line-height:1.8; }
-.subtitle { max-width:500px; }
-.btn {
-  border:0;border-radius:40px;padding:14px 23px;
-  display:inline-block;background:linear-gradient(135deg,#f29bc0,#d64f8d);
-  color:white;box-shadow:0 8px 25px #c64e8329;cursor:pointer;
+h1{font-size:clamp(3.5rem,14vw,7rem);line-height:.96;
+  color:var(--deep);font-weight:normal;margin:20px 0}
+h1 em{color:#e26b9f}
+h2{font-size:clamp(2rem,7vw,3.1rem);color:var(--deep);
+  font-weight:normal;margin:12px 0 18px}
+h3{color:var(--deep)}
+p{line-height:1.8}
+.subtitle{max-width:520px}
+.head{text-align:center;max-width:680px;margin:0 auto 30px}
+.head p{max-width:560px;margin-left:auto;margin-right:auto}
+.btn{
+  display:inline-block;border:0;border-radius:40px;
+  padding:14px 22px;color:white;
+  background:linear-gradient(135deg,#f1a0c2,#d64e8d);
+  box-shadow:0 8px 25px #b8327025;
   transition:transform .2s;
 }
-.btn:hover { transform:translateY(-3px); }
-.hero-heart { font-size:4rem;animation:pulse 1.8s infinite; }
-@keyframes pulse { 50% { transform:scale(1.13); } }
-@keyframes floatUp {
-  from { transform:translateY(0) rotate(0);opacity:0; }
-  15% { opacity:.8; }
-  to { transform:translateY(-110vh) rotate(45deg);opacity:0; }
+.btn:hover{transform:translateY(-3px)}
+.btn.light{background:white;color:var(--deep);border:1px solid var(--line)}
+.hero-heart{font-size:4rem;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.13)}}
+@keyframes floatUp{
+  0%{transform:translateY(0) rotate(0);opacity:0}
+  15%{opacity:.8}
+  100%{transform:translateY(-110vh) rotate(40deg);opacity:0}
 }
-.heart-float {
-  position:fixed;bottom:-35px;z-index:1;pointer-events:none;
-  color:#e36b9e;animation:floatUp linear forwards;
-}
-.head { text-align:center;max-width:650px;margin:0 auto 32px; }
-.head p { max-width:520px;margin:0 auto; }
-.card {
-  background:#ffffffc9;border:1px solid white;border-radius:25px;
+.heart-float{position:fixed;bottom:-35px;z-index:1;pointer-events:none;
+  color:#e56ca0;animation:floatUp linear forwards}
+.card{
+  background:#ffffffc9;border:1px solid white;border-radius:24px;
   padding:23px;box-shadow:0 12px 36px #a83e7117;
   backdrop-filter:blur(10px);
 }
-.center { text-align:center; }
-.countdown {
-  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:8px;max-width:560px;margin:25px auto;
+.center{text-align:center}
+.small{font:12px Arial,sans-serif;opacity:.8}
+.pill{
+  display:inline-block;border:1px solid #f5c5da;border-radius:40px;
+  padding:7px 12px;margin:4px;background:#fff9fc;font-size:.85rem;
 }
-.timebox {
-  background:#fff9fc;border:1px solid #f6c9dd;
-  border-radius:16px;padding:15px 3px;
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;max-width:550px;margin:24px auto}
+.timebox{padding:14px 2px;border-radius:15px;
+  border:1px solid var(--line);background:#fff9fc}
+.timebox strong{display:block;color:var(--deep);
+  font-size:clamp(1.4rem,6vw,2.4rem)}
+.timebox small{font:9px Arial,sans-serif;letter-spacing:1px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.photo{
+  min-width:0;background:white;padding:8px 8px 13px;border-radius:7px;
+  box-shadow:0 8px 24px #8e3d621b;transform:rotate(-1deg)
 }
-.timebox strong {
-  display:block;font-size:clamp(1.4rem,6vw,2.5rem);color:var(--deep);
+.photo:nth-child(even){transform:rotate(1.2deg)}
+.photo img{width:100%;aspect-ratio:3/4;object-fit:cover;
+  display:block;background:#ffe1ed;border-radius:4px;cursor:pointer}
+.photo p{text-align:center;font-size:.86rem;margin:9px 2px 0}
+.note{text-align:center;font:12px Arial,sans-serif;opacity:.8}
+.storyline{max-width:600px;margin:auto}
+.storyitem{position:relative;margin:16px 0;padding:18px 20px 18px 27px;
+  border-left:3px solid #e78ab3;background:#ffffffa6;border-radius:0 16px 16px 0}
+.storyitem:before{content:"♡";position:absolute;left:-13px;top:17px;
+  background:#fff0f7;color:var(--deep);border-radius:50%;padding:2px 5px}
+.reasons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.reason{min-height:130px;border:1px solid white;border-radius:19px;
+  padding:16px 10px;background:#ffffffc9;color:var(--ink)}
+.reason .emoji{display:block;font-size:1.8rem;margin-bottom:8px}
+.answer{display:none;font-size:.9rem;line-height:1.6}
+.reason.revealed .prompt{display:none}
+.reason.revealed .answer{display:block;animation:appear .3s}
+.envelope{
+  width:min(280px,90%);height:170px;background:#f3a0c3;
+  border:0;border-radius:12px;margin:20px auto;position:relative;
+  box-shadow:0 12px 30px #a83e7120;overflow:hidden
 }
-.timebox small { font:9px Arial,sans-serif;letter-spacing:1px; }
-.gallery {
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;
+.envelope:before{content:"";position:absolute;inset:0;background:#ec8ab6;
+  clip-path:polygon(0 0,50% 58%,100% 0)}
+.seal{position:relative;z-index:1;font-size:3rem}
+.letter{
+  display:none;text-align:left;white-space:pre-line;line-height:1.9;
+  padding:clamp(20px,5vw,38px);background:#fffdfb;border-radius:16px;
+  border:1px solid #f4d4e2
 }
-.photo {
-  min-width:0;padding:8px 8px 14px;background:white;
-  border-radius:7px;box-shadow:0 8px 22px #8e3d621c;
-  transform:rotate(-1deg);
+.letter.show{display:block;animation:appear .6s}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}}
+.music{max-width:540px;margin:auto;text-align:center}
+audio{width:100%;margin:12px 0}
+.bigemoji{font-size:4rem;display:block;margin:15px auto}
+.cake{font-size:5rem;border:0;background:none;transition:.3s}
+.cake:hover{transform:scale(1.1)}
+.candles{font-size:2rem;letter-spacing:7px}
+.jar{font-size:4rem;border:0;background:none}
+.jar-message{font-size:1.1rem;color:var(--deep);min-height:55px}
+.envelopes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mini-envelope{background:#fff0f7;border:1px solid #f5bfd7;
+  border-radius:15px;padding:18px 5px;font-size:2rem}
+.mini-envelope small{display:block;font:11px Arial,sans-serif;margin-top:8px}
+.quiz-option{display:block;width:100%;margin:9px 0;padding:12px;
+  border-radius:14px;background:#fff5fa;border:1px solid var(--line);color:var(--ink)}
+.quiz-option:hover{background:#ffe4ef}
+.quiz-result{min-height:35px;color:var(--deep)}
+.future-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.future-card{padding:17px;border-radius:17px;background:#fff8fc;border:1px solid white}
+.appreciation{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.hidden-heart{display:inline-block;margin:8px;padding:8px;border:0;
+  border-radius:50%;background:#fff0f7;font-size:1.5rem}
+.hidden-heart.found{background:#f3b1cf;transform:scale(1.12)}
+.secret-message{display:none}
+.secret-message.show{display:block;animation:appear .6s}
+footer{text-align:center;padding:40px 15px 55px;background:#ffffff75}
+footer .footer-heart{font-size:2rem;color:var(--deep)}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+  background:#96325f;color:white;padding:12px 18px;border-radius:30px;
+  z-index:50;display:none;text-align:center;width:max-content;max-width:90%}
+#lightbox{display:none;position:fixed;inset:0;z-index:40;
+  background:#371422e8;align-items:center;justify-content:center;padding:18px}
+#lightbox.open{display:flex}
+#lightbox img{max-width:100%;max-height:82vh;object-fit:contain;border-radius:12px}
+#lightbox button{position:absolute;top:18px;right:18px;border:0;border-radius:50%;
+  width:42px;height:42px;font-size:1.4rem;background:white;color:var(--deep)}
+@media(min-width:700px){
+  section{padding:85px 9%}
+  .gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .reasons{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
-.photo:nth-child(even) { transform:rotate(1deg); }
-.photo img {
-  width:100%;aspect-ratio:3/4;object-fit:cover;
-  display:block;background:#ffe3ef;border-radius:4px;
+@media(max-width:370px){
+  .navlinks{gap:8px;font-size:10px}
+  .brand{font-size:.9rem}
+  section{padding:55px 4%}
+  .card{padding:17px}
 }
-.photo p { font-size:.88rem;text-align:center;margin:9px 2px 0; }
-.note { font:12px Arial,sans-serif;text-align:center;opacity:.8; }
-.letter-area { max-width:650px;margin:auto;text-align:center; }
-.envelope {
-  width:min(280px,90%);height:175px;border:0;border-radius:12px;
-  background:#f3a2c4;cursor:pointer;margin:25px auto;
-  box-shadow:0 12px 30px #a83e7120;position:relative;overflow:hidden;
-}
-.envelope:before {
-  content:"";position:absolute;inset:0;background:#ee8bb7;
-  clip-path:polygon(0 0,50% 58%,100% 0);
-}
-.seal { position:relative;z-index:1;font-size:3rem; }
-.letter {
-  display:none;background:#fffdfb;border:1px solid #f5d7e4;
-  padding:clamp(20px,5vw,38px);border-radius:16px;
-  text-align:left;white-space:pre-line;line-height:1.9;
-}
-.letter.show { display:block;animation:appear .6s ease; }
-@keyframes appear {
-  from { opacity:0;transform:translateY(12px); }
-  to { opacity:1;transform:translateY(0); }
-}
-.reasons { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px; }
-.reason {
-  min-height:140px;border:1px solid white;border-radius:20px;
-  padding:16px 10px;background:#ffffffc7;color:var(--text);
-  cursor:pointer;box-shadow:0 8px 22px #a94c7310;
-}
-.reason .emoji { display:block;font-size:1.8rem;margin-bottom:10px; }
-.answer { display:none;font-size:.9rem;line-height:1.6; }
-.reason.revealed .prompt { display:none; }
-.reason.revealed .answer { display:block;animation:appear .3s; }
-.music { max-width:540px;margin:auto;text-align:center; }
-audio { width:100%;margin:12px 0; }
-.small { font:12px Arial,sans-serif;opacity:.8; }
-.gift {
-  font-size:5rem;border:0;background:transparent;cursor:pointer;
-  transition:transform .25s;
-}
-.gift:hover { transform:scale(1.1) rotate(-7deg); }
-.secret-message { display:none; }
-.secret-message.show { display:block;animation:appear .6s; }
-footer { padding:38px 15px 50px;text-align:center;background:#ffffff68; }
-footer .footer-heart { color:var(--deep);font-size:2rem; }
-@media(min-width:700px) {
-  section { padding:85px 9%; }
-  .gallery { grid-template-columns:repeat(3,minmax(0,1fr));gap:20px; }
-  .reasons { grid-template-columns:repeat(3,minmax(0,1fr)); }
-}
-@media(max-width:370px) {
-  .links { gap:8px;font-size:10px; }
-  .brand { font-size:.9rem; }
-  section { padding:55px 4%; }
-  .card { padding:17px; }
-}
-@media(prefers-reduced-motion:reduce) {
-  *,*:before,*:after { animation:none!important;scroll-behavior:auto!important; }
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;scroll-behavior:auto!important}
 }
 </style>
 </head>
 
 <body>
 <nav>
-  <a class="brand" href="#home">♡ My Kyuutu</a>
-  <div class="links">
+  <a class="brand" href="#home">♡ Kyuutu's World</a>
+  <div class="navlinks">
     <a href="#birthday">Birthday</a>
     <a href="#memories">Photos</a>
     <a href="#letter">Letter</a>
-    <a href="#surprise">Surprise</a>
+    <a href="#music">Song</a>
+    <a href="#final">Surprise</a>
   </div>
 </nav>
 
 <main>
+<!-- 01: WELCOME -->
 <section class="hero" id="home">
   <p class="eyebrow">A little world made with love</p>
   <h1>For my<br><em>Kyuutu</em> ♡</h1>
-  <p class="subtitle">
-    To my favourite girl, Anuska. A little corner of the internet
-    made just for you, filled with memories, smiles and love.
-  </p>
+  <p class="subtitle">To my favourite girl, Anuska. This little world is made just for you, with sweet memories, tiny surprises and a whole lot of love.</p>
   <div class="hero-heart">💗</div>
   <p>Made with love by Biraja Prasad Jena</p>
-  <a class="btn" href="#birthday">Open your little surprise ↓</a>
-  <p class="small">Scroll down, birthday girl 🌷</p>
+  <a class="btn" href="#birthday">Enter your little world ↓</a>
+  <p class="small">20 little corners, one special girl 🌷</p>
 </section>
 
+<!-- 02: COUNTDOWN -->
 <section id="birthday">
   <div class="head">
-    <p class="eyebrow">Your special day</p>
-    <h2>It's almost your day, Kyuutu 🎂</h2>
+    <p class="eyebrow">Save the date</p><h2>It's your day, Kyuutu 🎂</h2>
     <p>October 5 is special because the world welcomed you.</p>
   </div>
   <div class="card center">
@@ -217,90 +225,104 @@ footer .footer-heart { color:var(--deep);font-size:2rem; }
   </div>
 </section>
 
-<section id="memories">
-  <div class="head">
-    <p class="eyebrow">Little moments, big feelings</p>
-    <h2>Our memory corner 📸</h2>
-    <p>Every picture tells a little story. Here's a collection of moments to treasure.</p>
+<!-- 03: BIRTHDAY GREETING -->
+<section id="greeting">
+  <div class="head"><p class="eyebrow">A message for you</p><h2>Happy Birthday, Anuska! 🌷</h2></div>
+  <div class="card center">
+    <span class="bigemoji">🎂🌸🎀</span>
+    <p>Today is a celebration of you — your dreams, your laughter, your kindness and every little thing that makes you who you are.</p>
+    <p>May this new chapter bring peaceful days, beautiful opportunities, genuine smiles and people who treat your heart with care.</p>
+    <a class="btn" href="#memories">Let's look at our memories ♡</a>
   </div>
-
-  <div class="gallery">
-    <div class="photo">
-      <img src="IMG-20260329-WA0053(1).jpg" alt="Memory one" loading="lazy">
-      <p>A favourite moment ♡</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260404-WA0112.jpg" alt="Memory two" loading="lazy">
-      <p>A little memory 🌷</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260501-WA0167.jpg" alt="Memory three" loading="lazy">
-      <p>You make moments special ✨</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260527-WA0055.jpg" alt="Memory four" loading="lazy">
-      <p>One for the memory book 💗</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260617-WA0067.jpg" alt="Memory five" loading="lazy">
-      <p>Sweet little memories 🌸</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260617-WA0105.jpg" alt="Memory six" loading="lazy">
-      <p>Another moment to keep ♡</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260729-WA0018.jpg" alt="Memory seven" loading="lazy">
-      <p>Little things, big feelings 💕</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260811-WA0055.jpg" alt="Memory eight" loading="lazy">
-      <p>A lovely little moment ✨</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260829-WA0026.jpg" alt="Memory nine" loading="lazy">
-      <p>One more for us 🌷</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260909-WA0045.jpg" alt="Memory ten" loading="lazy">
-      <p>Something to smile about 😊</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260917-WA0025.jpg" alt="Memory eleven" loading="lazy">
-      <p>Memories worth keeping 💗</p>
-    </div>
-    <div class="photo">
-      <img src="IMG-20260921-WA0050.jpg" alt="Memory twelve" loading="lazy">
-      <p>More memories to come ♡</p>
-    </div>
-  </div>
-  <p class="note">Twelve little spaces in our memory corner, made with love.</p>
 </section>
 
-<section id="letter">
-  <div class="head">
-    <p class="eyebrow">Just for you</p>
-    <h2>A letter from me 💌</h2>
-    <p>Tap the envelope to open something written from the heart.</p>
+<!-- 04: 12 PHOTO GALLERY -->
+<section id="memories">
+  <div class="head"><p class="eyebrow">Little moments, big feelings</p><h2>Our memory corner 📸</h2>
+    <p>Tap any picture to see it bigger. Twelve little spaces for memories to treasure.</p></div>
+  <div class="gallery">
+    <div class="photo"><img src="IMG-20260329-WA0053(1).jpg" alt="Memory 1" loading="lazy"><p>A favourite moment ♡</p></div>
+    <div class="photo"><img src="IMG-20260404-WA0112.jpg" alt="Memory 2" loading="lazy"><p>A little memory 🌷</p></div>
+    <div class="photo"><img src="IMG-20260501-WA0167.jpg" alt="Memory 3" loading="lazy"><p>You make moments special ✨</p></div>
+    <div class="photo"><img src="IMG-20260527-WA0055.jpg" alt="Memory 4" loading="lazy"><p>One for the memory book 💗</p></div>
+    <div class="photo"><img src="IMG-20260617-WA0067.jpg" alt="Memory 5" loading="lazy"><p>Sweet little memories 🌸</p></div>
+    <div class="photo"><img src="IMG-20260617-WA0105.jpg" alt="Memory 6" loading="lazy"><p>Another moment to keep ♡</p></div>
+    <div class="photo"><img src="IMG-20260729-WA0018.jpg" alt="Memory 7" loading="lazy"><p>Little things, big feelings 💕</p></div>
+    <div class="photo"><img src="IMG-20260811-WA0055.jpg" alt="Memory 8" loading="lazy"><p>A lovely little moment ✨</p></div>
+    <div class="photo"><img src="IMG-20260829-WA0026.jpg" alt="Memory 9" loading="lazy"><p>One more for us 🌷</p></div>
+    <div class="photo"><img src="IMG-20260909-WA0045.jpg" alt="Memory 10" loading="lazy"><p>Something to smile about 😊</p></div>
+    <div class="photo"><img src="IMG-20260917-WA0025.jpg" alt="Memory 11" loading="lazy"><p>Memories worth keeping 💗</p></div>
+    <div class="photo"><img src="IMG-20260921-WA0050.jpg" alt="Memory 12" loading="lazy"><p>More memories to come ♡</p></div>
   </div>
-  <div class="letter-area">
-    <button class="envelope" id="envelope" aria-label="Open letter">
-      <span class="seal">💌</span>
-    </button>
+  <p class="note">A little gallery made just for you.</p>
+</section>
+
+<!-- 05: SCRAPBOOK -->
+<section id="scrapbook">
+  <div class="head"><p class="eyebrow">A page from our scrapbook</p><h2>Little things to remember 📔</h2></div>
+  <div class="card center">
+    <span class="bigemoji">📷💌🌷</span>
+    <p>Some memories are loud and exciting. Others are tiny moments, simple words or a conversation that makes you smile later.</p>
+    <p>This page is a reminder that lovely memories don't have to be perfect or extraordinary. Sometimes, the smallest things become the ones we cherish.</p>
+    <span class="pill">Little moments</span><span class="pill">Real smiles</span><span class="pill">Sweet memories</span><span class="pill">More to come</span>
+  </div>
+</section>
+
+<!-- 06: STORY TIMELINE -->
+<section id="story">
+  <div class="head"><p class="eyebrow">Every story has little chapters</p><h2>Our story, one step at a time 🌙</h2>
+    <p>Edit these captions whenever you want to add your own special dates.</p></div>
+  <div class="storyline">
+    <div class="storyitem"><strong>Chapter 1 — The beginning 🌸</strong><p>Every meaningful story starts somewhere. This is a little space for the beginning of ours.</p></div>
+    <div class="storyitem"><strong>Chapter 2 — Getting to know you 💬</strong><p>Little conversations, discovering the things that make each other smile, and learning more along the way.</p></div>
+    <div class="storyitem"><strong>Chapter 3 — Little memories 📸</strong><p>Moments that become special because we remember how they made us feel.</p></div>
+    <div class="storyitem"><strong>Chapter 4 — Today, and what's ahead 💗</strong><p>Celebrating you today and leaving room for many more lovely chapters in the future.</p></div>
+  </div>
+</section>
+
+<!-- 07: THINGS I ADORE -->
+<section id="adore">
+  <div class="head"><p class="eyebrow">The little things</p><h2>Things I adore about you 🌷</h2></div>
+  <div class="card center">
+    <span class="bigemoji">🎀🌸🦋</span>
+    <p>Your unique personality, the little things that make you laugh, the way you have your own dreams and ideas, and the person you continue to become.</p>
+    <p>You don't have to be perfect to be appreciated. You deserve to be valued for who you are, on ordinary days as much as special ones.</p>
+  </div>
+</section>
+
+<!-- 08: REASONS GAME -->
+<section id="reasons">
+  <div class="head"><p class="eyebrow">Tap to discover</p><h2>Reasons you're special 💕</h2><p>Open each card for a little reminder.</p></div>
+  <div class="reasons">
+    <button class="reason"><span class="emoji">🌸</span><span class="prompt">Reason one…</span><span class="answer">I appreciate the unique person you are.</span></button>
+    <button class="reason"><span class="emoji">😊</span><span class="prompt">Reason two…</span><span class="answer">Your smile can make an ordinary moment feel special.</span></button>
+    <button class="reason"><span class="emoji">🫶</span><span class="prompt">Reason three…</span><span class="answer">I value the trust we build by being honest with each other.</span></button>
+    <button class="reason"><span class="emoji">✨</span><span class="prompt">Reason four…</span><span class="answer">You have your own magic. You don't need to be anyone else.</span></button>
+    <button class="reason"><span class="emoji">🌷</span><span class="prompt">Reason five…</span><span class="answer">I love learning the little things that make you happy.</span></button>
+    <button class="reason"><span class="emoji">💗</span><span class="prompt">One last reason…</span><span class="answer">Being yourself is already something special, Kyuutu.</span></button>
+  </div>
+</section>
+
+<!-- 09: LOVE LETTER -->
+<section id="letter">
+  <div class="head"><p class="eyebrow">Just between us</p><h2>A letter from me 💌</h2><p>Tap the envelope to open your letter.</p></div>
+  <div class="center">
+    <button class="envelope" id="envelope" aria-label="Open the birthday letter"><span class="seal">💌</span></button>
     <p class="small" id="letterHint">Tap to open your letter</p>
-    <article class="letter" id="letterContent">
-      <h3>To my Kyuutu, Anuska ♡</h3>
+  </div>
+  <article class="letter" id="letterContent">
+    <h3>To my Kyuutu, Anuska ♡</h3>
 Happy Birthday, my girl! 🎂💗
 
 I may not always find the perfect words, but today I want you to know how special you are to me.
 
-Thank you for being yourself, for your little ways, your smile, and all the moments that become beautiful simply because you're part of them. Sometimes even a small conversation with you can make an ordinary day feel different.
+Thank you for being yourself, for your little ways, your smile, and the moments that become beautiful simply because you're part of them. Even a small conversation can make an ordinary day feel different.
 
-For your new year of life, I wish you happiness, peace, good health, courage for your dreams, and countless reasons to smile. I hope you always remember that you matter and deserve kindness, respect and beautiful things.
+For this new year of your life, I wish you peace, happiness, courage for your dreams, good health, and countless reasons to smile. I hope you always remember that you matter and deserve kindness, respect and beautiful things.
 
-I don't expect every day to be perfect. I hope we continue to understand each other, speak honestly, respect each other and make lovely memories along the way.
+I don't expect every day to be perfect. I hope we continue to understand each other, speak honestly, respect each other, and make lovely memories along the way.
 
-This website is a small birthday gift, made with thought and affection, to celebrate the wonderful person you are.
+This website is a little birthday gift, made with thought and affection, to celebrate the wonderful person you are.
 
 Keep smiling, keep dreaming, and keep being your adorable self.
 
@@ -308,81 +330,148 @@ Happy Birthday once again, my Kyuutu. 🌷
 
 With lots of love,
 Your Biraja ♡
-    </article>
-  </div>
+  </article>
 </section>
 
-<section id="reasons">
-  <div class="head">
-    <p class="eyebrow">A few little reminders</p>
-    <h2>Reasons you're special 💕</h2>
-    <p>Tap every card to reveal a little reminder.</p>
-  </div>
-  <div class="reasons">
-    <button class="reason">
-      <span class="emoji">🌸</span><span class="prompt">Reason one…</span>
-      <span class="answer">I appreciate the unique person you are.</span>
-    </button>
-    <button class="reason">
-      <span class="emoji">😊</span><span class="prompt">Reason two…</span>
-      <span class="answer">Your smile can make an ordinary moment feel special.</span>
-    </button>
-    <button class="reason">
-      <span class="emoji">🫶</span><span class="prompt">Reason three…</span>
-      <span class="answer">I value the trust and comfort we build by being honest.</span>
-    </button>
-    <button class="reason">
-      <span class="emoji">✨</span><span class="prompt">Reason four…</span>
-      <span class="answer">You have your own magic. You never need to be anyone else.</span>
-    </button>
-    <button class="reason">
-      <span class="emoji">🌷</span><span class="prompt">Reason five…</span>
-      <span class="answer">I love learning the little things that make you happy.</span>
-    </button>
-    <button class="reason">
-      <span class="emoji">💗</span><span class="prompt">One last reason…</span>
-      <span class="answer">Being you is already special, Kyuutu. Never forget that.</span>
-    </button>
-  </div>
-</section>
-
+<!-- 10: MUSIC -->
 <section id="music">
-  <div class="head">
-    <p class="eyebrow">A song for you</p>
-    <h2>Press play, my girl 🎶</h2>
-    <p>A little soundtrack for this little world.</p>
-  </div>
+  <div class="head"><p class="eyebrow">A song for my girl</p><h2>Our little soundtrack 🎶</h2></div>
   <div class="card music">
-    <div style="font-size:3rem">🎧💗🎵</div>
-    <h3>Tera Naam Doon ♡</h3>
+    <span class="bigemoji">🎧💗🎵</span><h3>Tera Naam Doon ♡</h3>
     <audio controls loop preload="metadata">
       <source src="Tera%20Naam%20Doon%20Entertainment%20320%20Kbps.mp3" type="audio/mpeg">
-      Your browser does not support audio.
+      Your browser does not support this audio file.
     </audio>
-    <p class="small">Tap play to listen to your song.</p>
+    <p class="small">Tap play to listen. Phones usually require a tap before music can start.</p>
   </div>
 </section>
 
-<section id="surprise">
-  <div class="head">
-    <p class="eyebrow">One final surprise</p>
-    <h2>Something for you 🎁</h2>
-    <p>Ready to open your little gift, Kyuutu?</p>
-  </div>
+<!-- 11: BIRTHDAY CAKE -->
+<section id="cake">
+  <div class="head"><p class="eyebrow">Time for cake</p><h2>A little virtual birthday cake 🎂</h2><p>Tap the cake to celebrate!</p></div>
   <div class="card center">
-    <button class="gift" id="gift" aria-label="Open surprise">🎁</button>
-    <p id="giftHint">Tap the gift to reveal your surprise</p>
+    <button class="cake" id="cakeButton" aria-label="Celebrate with cake">🎂</button>
+    <div class="candles" id="candles">🕯️ 🕯️ 🕯️</div>
+    <p id="cakeMessage">Three little candles, a world of wishes.</p>
+    <button class="btn" id="cakeCelebrate">Celebrate! 🎉</button>
+  </div>
+</section>
+
+<!-- 12: BIRTHDAY WISH -->
+<section id="wish">
+  <div class="head"><p class="eyebrow">Make a wish</p><h2>A wish for your new chapter 🌟</h2></div>
+  <div class="card center">
+    <span class="bigemoji">🌙✨🌸</span>
+    <p>Take a little moment for yourself. Think of a dream you're excited about, a place you'd like to see, a skill you'd like to learn or something that would bring you joy.</p>
+    <button class="btn" id="wishButton">I've made my wish ♡</button>
+    <p id="wishMessage" class="quiz-result">Your wish is yours to keep. 💗</p>
+  </div>
+</section>
+
+<!-- 13: COMPLIMENT JAR -->
+<section id="jar">
+  <div class="head"><p class="eyebrow">A jar of kind words</p><h2>Pick a little compliment 🌷</h2><p>Tap the jar whenever you need a smile.</p></div>
+  <div class="card center">
+    <button class="jar" id="jarButton" aria-label="Pick a compliment">🫙</button>
+    <p class="jar-message" id="jarMessage">Your little compliment is waiting…</p>
+    <button class="btn light" id="anotherCompliment">Another one ♡</button>
+  </div>
+</section>
+
+<!-- 14: SURPRISE ENVELOPES -->
+<section id="envelopes">
+  <div class="head"><p class="eyebrow">Choose your surprise</p><h2>Three little envelopes 💌</h2><p>Tap each envelope to reveal a message.</p></div>
+  <div class="envelopes">
+    <button class="mini-envelope" data-message="You deserve gentle days, sincere people and reasons to smile. 🌸">💌<small>Envelope 1</small></button>
+    <button class="mini-envelope" data-message="Never stop believing in your dreams. Every small step matters. ✨">💌<small>Envelope 2</small></button>
+    <button class="mini-envelope" data-message="A little reminder from Biraja: you're appreciated just as you are. 💗">💌<small>Envelope 3</small></button>
+  </div>
+  <div class="card center" style="margin-top:18px"><p id="envelopeMessage">Choose an envelope to open your note.</p></div>
+</section>
+
+<!-- 15: CUTE QUIZ -->
+<section id="quiz">
+  <div class="head"><p class="eyebrow">A tiny game</p><h2>A little birthday quiz 🎀</h2><p>No wrong answers — just a little fun!</p></div>
+  <div class="card">
+    <h3>What makes a birthday feel special?</h3>
+    <button class="quiz-option" data-answer="A">A. Thoughtful moments and kindness 💗</button>
+    <button class="quiz-option" data-answer="B">B. Only expensive presents 🎁</button>
+    <button class="quiz-option" data-answer="C">C. A perfect photo 🌸</button>
+    <p id="quizResult" class="quiz-result">Pick your answer!</p>
+  </div>
+</section>
+
+<!-- 16: FUTURE MEMORIES -->
+<section id="future">
+  <div class="head"><p class="eyebrow">There is more ahead</p><h2>Future memories waiting to happen 🌈</h2></div>
+  <div class="future-grid">
+    <div class="future-card"><span>🌅</span><h3>New beginnings</h3><p>More days to learn and grow.</p></div>
+    <div class="future-card"><span>📸</span><h3>More memories</h3><p>More little moments to remember.</p></div>
+    <div class="future-card"><span>🌍</span><h3>New adventures</h3><p>New places, ideas and experiences.</p></div>
+    <div class="future-card"><span>💗</span><h3>More kindness</h3><p>Honest words and thoughtful gestures.</p></div>
+  </div>
+</section>
+
+<!-- 17: APPRECIATION WALL -->
+<section id="appreciation">
+  <div class="head"><p class="eyebrow">A wall of warm wishes</p><h2>Little reminders for you 🌸</h2></div>
+  <div class="card center">
+    <div class="appreciation">
+      <span class="pill">You matter ♡</span><span class="pill">Keep dreaming ✨</span>
+      <span class="pill">You are appreciated 🌷</span><span class="pill">Take your time 🌙</span>
+      <span class="pill">Celebrate your growth 🌱</span><span class="pill">Be kind to yourself 💗</span>
+      <span class="pill">Your ideas matter 🎀</span><span class="pill">You deserve respect 🫶</span>
+    </div>
+    <p>Save this little reminder for days when you need it: you don't have to do everything perfectly to be worthy of love and kindness.</p>
+  </div>
+</section>
+
+<!-- 18: HIDDEN HEART HUNT -->
+<section id="hunt">
+  <div class="head"><p class="eyebrow">Can you find them?</p><h2>Hidden heart treasure hunt 🔎</h2>
+    <p>Tap the hearts below. Find all five to unlock a tiny message!</p></div>
+  <div class="card center">
+    <div id="heartHunt">
+      <button class="hidden-heart" aria-label="Find heart 1">♡</button>
+      <button class="hidden-heart" aria-label="Find heart 2">♡</button>
+      <button class="hidden-heart" aria-label="Find heart 3">♡</button>
+      <button class="hidden-heart" aria-label="Find heart 4">♡</button>
+      <button class="hidden-heart" aria-label="Find heart 5">♡</button>
+    </div>
+    <p id="huntCount">Hearts found: 0 / 5</p>
+    <p id="huntMessage">Your treasure hunt begins! 💗</p>
+  </div>
+</section>
+
+<!-- 19: SECRET MESSAGE -->
+<section id="secret">
+  <div class="head"><p class="eyebrow">One last little note</p><h2>A secret just for you 🤫</h2></div>
+  <div class="card center">
+    <button class="btn" id="secretButton">Reveal the secret 💗</button>
     <div class="secret-message" id="secretMessage">
-      <div style="font-size:3rem">🎉💗🎂</div>
+      <span class="bigemoji">💝</span>
+      <h3>Dear Kyuutu,</h3>
+      <p>This little website may be made of code, pictures and words, but the thought behind it is simple: I wanted to make something personal to celebrate you.</p>
+      <p>Thank you for being the person you are. May this year bring you moments that make your heart feel light and your dreams feel closer.</p>
+      <p>With love, Biraja ♡</p>
+    </div>
+  </div>
+</section>
+
+<!-- 20: FINAL CELEBRATION -->
+<section id="final">
+  <div class="head"><p class="eyebrow">The final surprise</p><h2>Happy Birthday, my Kyuutu! 🎂</h2>
+    <p>One last button. One more birthday wish. All for you.</p></div>
+  <div class="card center">
+    <button class="cake" id="finalGift" aria-label="Reveal final birthday surprise">🎁</button>
+    <p id="finalHint">Tap your gift to finish the celebration!</p>
+    <div class="secret-message" id="finalMessage">
+      <span class="bigemoji">🎉💗🌸🎂</span>
       <h2>Happy Birthday, Anuska!</h2>
-      <p>
-        Today we celebrate you, your dreams, your laughter, and
-        everything that makes you wonderfully yourself.
-      </p>
-      <p>I hope your year is filled with new beginnings, lovely memories, and reasons to smile.</p>
-      <h3>You're one of a kind, Kyuutu. ♡</h3>
-      <button class="btn" id="loveButton">Send a little love 💗</button>
-      <p id="loveResponse" class="small"></p>
+      <p>May your days be filled with laughter, your heart with peace, and your life with opportunities to become everything you dream of.</p>
+      <p>Keep smiling, keep growing, and never forget how special you are.</p>
+      <h3>With lots of love, your Biraja ♡</h3>
+      <button class="btn" id="sendLove">Send one last burst of love 💗</button>
     </div>
   </div>
 </section>
@@ -391,114 +480,209 @@ Your Biraja ♡
 <footer>
   <div class="footer-heart">♡</div>
   <p>Made especially for Anuska, my Kyuutu.</p>
-  <p class="small">With love, Biraja Prasad Jena · 2026</p>
+  <p class="small">A little pink world by Biraja Prasad Jena · 2026</p>
   <a class="small" href="#home">Back to the beginning ↑</a>
 </footer>
 
+<div id="lightbox" aria-label="Expanded photo">
+  <button id="closeLightbox" aria-label="Close photo">×</button>
+  <img id="lightboxImage" src="" alt="Expanded memory">
+</div>
+<div id="toast" role="status"></div>
+
 <script>
-/* Birthday countdown: October 5, 2026 */
+/* Birthday countdown: October 5, 2026, local time */
 const birthday = new Date(2026, 9, 5, 0, 0, 0);
-
-function updateCountdown() {
-  const now = new Date();
-  const diff = birthday.getTime() - now.getTime();
+function updateCountdown(){
+  const now = new Date(), diff = birthday.getTime() - now.getTime();
   const label = document.getElementById("countLabel");
-  const message = document.getElementById("birthdayMessage");
+  const msg = document.getElementById("birthdayMessage");
   const boxes = document.getElementById("countBoxes");
-
-  if (now.toDateString() === birthday.toDateString()) {
+  if(now.toDateString() === birthday.toDateString()){
     label.textContent = "It's your birthday, Kyuutu! 🎂";
-    message.textContent = "Today is all about you. Happy Birthday! 💗";
-    document.getElementById("days").textContent = "🎂";
-    document.getElementById("hours").textContent = "💗";
-    document.getElementById("minutes").textContent = "🎉";
-    document.getElementById("seconds").textContent = "♡";
+    msg.textContent = "Today is all about you. Happy Birthday! 💗";
+    ["days","hours","minutes","seconds"].forEach((id,i)=>{
+      document.getElementById(id).textContent = ["🎂","💗","🎉","♡"][i];
+    });
     return;
   }
-
-  if (diff <= 0) {
+  if(diff <= 0){
     boxes.style.display = "none";
-    label.textContent = "Your birthday celebration is here to stay 💕";
-    message.textContent = "Sending you birthday wishes and love, Kyuutu!";
+    label.textContent = "Your birthday has arrived and passed for this year 💕";
+    msg.textContent = "The birthday wishes stay here for you!";
     return;
   }
-
-  document.getElementById("days").textContent =
-    Math.floor(diff / 86400000);
-  document.getElementById("hours").textContent =
-    Math.floor(diff / 3600000) % 24;
-  document.getElementById("minutes").textContent =
-    Math.floor(diff / 60000) % 60;
-  document.getElementById("seconds").textContent =
-    Math.floor(diff / 1000) % 60;
+  document.getElementById("days").textContent = Math.floor(diff/86400000);
+  document.getElementById("hours").textContent = Math.floor(diff/3600000)%24;
+  document.getElementById("minutes").textContent = Math.floor(diff/60000)%60;
+  document.getElementById("seconds").textContent = Math.floor(diff/1000)%60;
 }
 updateCountdown();
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown,1000);
 
 /* Floating hearts */
 const heartSymbols = ["♡","♥","💗","💕","✧"];
-function createHeart() {
-  const heart = document.createElement("span");
-  heart.className = "heart-float";
-  heart.textContent = heartSymbols[Math.floor(Math.random()*heartSymbols.length)];
-  heart.style.left = Math.random()*100 + "vw";
-  heart.style.fontSize = (12 + Math.random()*20) + "px";
-  heart.style.animationDuration = (7 + Math.random()*6) + "s";
-  document.body.appendChild(heart);
-  setTimeout(() => heart.remove(), 14000);
+function createHeart(){
+  const el = document.createElement("span");
+  el.className = "heart-float";
+  el.textContent = heartSymbols[Math.floor(Math.random()*heartSymbols.length)];
+  el.style.left = Math.random()*100 + "vw";
+  el.style.fontSize = (12+Math.random()*19)+"px";
+  el.style.animationDuration = (7+Math.random()*6)+"s";
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),14000);
 }
-setInterval(createHeart, 900);
+setInterval(createHeart,950);
 
-/* Interactive letter */
-const envelope = document.getElementById("envelope");
-const letter = document.getElementById("letterContent");
-envelope.addEventListener("click", () => {
-  const opened = letter.classList.toggle("show");
-  envelope.querySelector(".seal").textContent = opened ? "💖" : "💌";
-  document.getElementById("letterHint").textContent =
-    opened ? "A little letter, written with love ♡" : "Tap to open your letter";
+/* Toast message */
+let toastTimer;
+function toast(message){
+  const el = document.getElementById("toast");
+  el.textContent = message;el.style.display="block";
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>el.style.display="none",2400);
+}
+
+/* Click any gallery photo to enlarge */
+document.querySelectorAll(".photo img").forEach(img=>{
+  img.addEventListener("click",()=>{
+    document.getElementById("lightboxImage").src=img.src;
+    document.getElementById("lightbox").classList.add("open");
+  });
+});
+function closeLightbox(){
+  document.getElementById("lightbox").classList.remove("open");
+  document.getElementById("lightboxImage").src="";
+}
+document.getElementById("closeLightbox").addEventListener("click",closeLightbox);
+document.getElementById("lightbox").addEventListener("click",e=>{
+  if(e.target.id==="lightbox") closeLightbox();
 });
 
-/* Reveal the reasons */
-document.querySelectorAll(".reason").forEach(card => {
-  card.addEventListener("click", () => card.classList.toggle("revealed"));
+/* Open birthday letter */
+document.getElementById("envelope").addEventListener("click",()=>{
+  const letter=document.getElementById("letterContent");
+  const opened=letter.classList.toggle("show");
+  document.querySelector("#envelope .seal").textContent=opened?"💖":"💌";
+  document.getElementById("letterHint").textContent=opened?
+    "A little letter, written with love ♡":"Tap to open your letter";
 });
 
-/* Birthday gift and confetti */
-let giftOpened = false;
+/* Reasons cards */
+document.querySelectorAll(".reason").forEach(card=>{
+  card.addEventListener("click",()=>card.classList.toggle("revealed"));
+});
 
-function confetti() {
-  const symbols = ["💗","💕","✨","🌸","🎉","♡"];
-  for (let i = 0; i < 35; i++) {
-    const item = document.createElement("span");
-    item.textContent = symbols[Math.floor(Math.random()*symbols.length)];
-    item.style.cssText =
-      "position:fixed;z-index:30;top:-30px;pointer-events:none;transition:transform 2.5s ease,opacity 2.5s ease;";
-    item.style.left = (5 + Math.random()*90) + "vw";
-    item.style.fontSize = (14 + Math.random()*18) + "px";
+/* Confetti */
+function confetti(){
+  const symbols=["💗","💕","✨","🌸","🎉","♡"];
+  for(let i=0;i<38;i++){
+    const item=document.createElement("span");
+    item.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    item.style.cssText="position:fixed;z-index:35;top:-30px;pointer-events:none;transition:transform 2.5s ease,opacity 2.5s ease";
+    item.style.left=(5+Math.random()*90)+"vw";
+    item.style.fontSize=(14+Math.random()*18)+"px";
     document.body.appendChild(item);
-
-    requestAnimationFrame(() => {
-      item.style.transform =
-        `translate(${Math.random()*100-50}px,${innerHeight+80}px) rotate(${Math.random()*500}deg)`;
-      item.style.opacity = "0";
+    requestAnimationFrame(()=>{
+      item.style.transform=`translate(${Math.random()*100-50}px,${innerHeight+80}px) rotate(${Math.random()*500}deg)`;
+      item.style.opacity="0";
     });
-    setTimeout(() => item.remove(), 2800);
+    setTimeout(()=>item.remove(),2800);
   }
 }
 
-document.getElementById("gift").addEventListener("click", () => {
-  if (giftOpened) return;
-  giftOpened = true;
-  document.getElementById("secretMessage").classList.add("show");
-  document.getElementById("giftHint").textContent = "Surprise! This is all for you 💗";
-  document.getElementById("gift").textContent = "💝";
+/* Birthday cake */
+let cakeTaps=0;
+document.getElementById("cakeButton").addEventListener("click",()=>{
+  cakeTaps++;
+  document.getElementById("cakeMessage").textContent=[
+    "Make a little wish, Kyuutu! 🌟",
+    "One more birthday wish for you! 💗",
+    "May your wishes bring you joy! 🌸",
+    "Sending you a whole lot of love! 🎂"
+  ][Math.min(cakeTaps-1,3)];
+  if(cakeTaps>=3) confetti();
+});
+document.getElementById("cakeCelebrate").addEventListener("click",()=>{
+  document.getElementById("candles").textContent="✨ 💗 ✨";
+  document.getElementById("cakeMessage").textContent="Cake, wishes and happiness for my Kyuutu!";
   confetti();
 });
 
-document.getElementById("loveButton").addEventListener("click", () => {
-  document.getElementById("loveResponse").textContent =
-    "A little love sent from Biraja to Kyuutu. ♡";
+/* Birthday wish */
+document.getElementById("wishButton").addEventListener("click",()=>{
+  document.getElementById("wishMessage").textContent="Wish made! Keep believing in the lovely things ahead. ♡";
+  confetti();
+});
+
+/* Compliment jar */
+const compliments=[
+  "Your dreams deserve time and care. 🌷",
+  "You bring your own special energy to the world. ✨",
+  "You deserve kindness, respect and happiness. 💗",
+  "Keep being curious and keep growing. 🌱",
+  "Your smile is worth celebrating. 😊",
+  "You don't need to be perfect to be wonderful. 🌸",
+  "I hope today gives you a reason to laugh. 🎀",
+  "You are allowed to take things one step at a time. 🫶",
+  "Your ideas and feelings matter. 💌",
+  "Keep a little room for magic and new beginnings. 🌙"
+];
+function newCompliment(){
+  document.getElementById("jarMessage").textContent=
+    compliments[Math.floor(Math.random()*compliments.length)];
+}
+document.getElementById("jarButton").addEventListener("click",newCompliment);
+document.getElementById("anotherCompliment").addEventListener("click",newCompliment);
+
+/* Surprise envelopes */
+document.querySelectorAll(".mini-envelope").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.getElementById("envelopeMessage").textContent=btn.dataset.message;
+    btn.textContent="💝";
+  });
+});
+
+/* Mini quiz */
+document.querySelectorAll(".quiz-option").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.getElementById("quizResult").textContent=
+      btn.dataset.answer==="A"?
+      "Correct in this little birthday game! Thoughtful moments can mean so much. 💗":
+      "That's one way to celebrate, too! But kindness and thoughtful moments are lovely gifts. 🌸";
+  });
+});
+
+/* Hidden heart hunt */
+let heartsFound=0;
+document.querySelectorAll(".hidden-heart").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    if(btn.classList.contains("found")) return;
+    btn.classList.add("found");btn.textContent="💗";heartsFound++;
+    document.getElementById("huntCount").textContent=`Hearts found: ${heartsFound} / 5`;
+    if(heartsFound===5){
+      document.getElementById("huntMessage").textContent="You found every heart! Your secret reward: you're appreciated just as you are. 💝";
+      confetti();
+    }else{
+      document.getElementById("huntMessage").textContent="You found one! Keep going. ♡";
+    }
+  });
+});
+
+/* Secret note */
+document.getElementById("secretButton").addEventListener("click",()=>{
+  document.getElementById("secretMessage").classList.toggle("show");
+});
+
+/* Final birthday gift */
+document.getElementById("finalGift").addEventListener("click",()=>{
+  document.getElementById("finalMessage").classList.add("show");
+  document.getElementById("finalHint").textContent="Surprise! This little celebration is all for you 💗";
+  document.getElementById("finalGift").textContent="💝";
+  confetti();
+});
+document.getElementById("sendLove").addEventListener("click",()=>{
+  toast("A little love sent from Biraja to Kyuutu. ♡");
   confetti();
 });
 </script>
